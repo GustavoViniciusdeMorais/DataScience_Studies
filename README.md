@@ -1,6 +1,11 @@
 # Blanck Jupyter Notebook Docker Environment
 
-Gustavo Vinicius Morais
+### Gustavo Vinicius Morais
+
+### The changes are in the branches
+```
+[branch/kaggle-*]
+```
 
 ```
 sudo docker-compose up -d --build
