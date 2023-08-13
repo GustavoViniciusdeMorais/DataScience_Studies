@@ -2,6 +2,8 @@ version: '3'
 
 services:
     jupyternotes:
+        image: jupyter/scipy-notebook
+        container_name: gusjup
         build: .
         ports:
             - "8888:8888"
