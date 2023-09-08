@@ -3,7 +3,16 @@ version: '3'
 services:
     jupyternotes:
         build: .
+        container_name: gusdatasci
         ports:
             - "8888:8888"
         volumes:
             - ./:/work
+
+networks:
+    gus-php-network:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: "12.0.0.0/16"
