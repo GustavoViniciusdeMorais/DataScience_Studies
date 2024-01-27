@@ -26,16 +26,3 @@ pip install tensorflow
 pip install keras
 pip install tensorflow
 ```
-
-### Conda env
-```sh
-conda env list
-conda create -n gus_py311 python=3.11
-conda activate gus_py311
-conda install ipykernel
-```
-
-### Create jupyter notebook new kernel with conda env
-```
-python -m ipykernel install --user --name=gus_py311
-```
