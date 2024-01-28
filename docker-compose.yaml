@@ -6,6 +6,7 @@ services:
         container_name: gusdatasci
         ports:
             - "8888:8888"
+            - "8080:8080"
         volumes:
             - ./:/work
 
