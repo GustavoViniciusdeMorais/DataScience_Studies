@@ -1,2 +1,2 @@
-FROM jupyter/scipy-notebook
+FROM gustavovinicius/guspy:spark
 WORKDIR /work

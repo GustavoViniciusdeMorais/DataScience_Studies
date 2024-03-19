@@ -8,9 +8,13 @@ services:
             - "8888:8888"
         volumes:
             - ./:/work
+        networks:
+            gus-sci-network:
+                ipv4_address: 12.0.0.2
+
 
 networks:
-    gus-php-network:
+    gus-sci-network:
         driver: bridge
         ipam:
             driver: default
