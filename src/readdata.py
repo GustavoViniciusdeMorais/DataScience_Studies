@@ -7,6 +7,9 @@ spark = pyspark.sql.SparkSession.builder\
            .getOrCreate()
 
 df = spark.read.format('jdbc') \
-        .options(driver='org.sqlite.JDBC', dbtable='my_table',
-                 url='jdbc:sqlite:/../database.db')\
+        .options(driver='org.sqlite.JDBC', dbtable='products',
+                 url='jdbc:sqlite:/work/database.db')\
         .load()
+
+print('Dataframe loaded successfully')
+print(df.show())
