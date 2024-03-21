@@ -21,6 +21,14 @@ spark/bin/pyspark
 Apache Spark is an open-source distributed computing system that provides an interface for programming entire clusters with 
 implicit data parallelism and fault tolerance. It's designed for fast computation and works with large-scale data processing.
 
+## Install
+Apache Spark is a folder with all the code needed, and requires java. <br>
+Download java jdk deb package from oracle and install it with ` sudo dpkg -i package.deb `.
+Add the JAVA_HOME path to the /etc/environment file as follows: <br>
+`JAVA_HOME="/usr/lib/jvm/jdk-21-oracle-x64"`<br>
+Download spark from https://spark.apache.org/downloads.html <br>
+Unzip, rename to spark ` mv spark-2-hadoop-2 spark`, and execute the command ` spark/bin/pyspark `
+
 ## Configuration
 
 To configure Apache Spark, you typically need to set up environment variables such as `SPARK_HOME` and `PYTHONPATH` to point to 
@@ -31,6 +39,10 @@ located in the Spark configuration directory.
 ## Example: Reading Data from SQLite Database into PySpark SQL Session
 
 Here's a simple example of how to read data from a SQLite database into a PySpark SQL session:
+
+## Tip
+Code with the python terminal for convenience.<br>
+<img src="./imgs/pyspark.png" width="700" height="600">
 
 ### Python Code
 
