@@ -4,6 +4,8 @@ from keras.models import load_model
 from keras.preprocessing import image
 import numpy as np
 import os
+from fastapi.responses import JSONResponse
+import shutil
 
 app = FastAPI()
 
@@ -11,20 +13,34 @@ app = FastAPI()
 async def check():
     return {"status": "success"}
 
-@app.post("/files/")
+@app.post("/files")
 async def file_size(file: Annotated[bytes, File()]):
     print('test')
     return {"file_size": len(file)}
 
+def save_file(file):
+    try:
+        with open(file.filename, "wb") as buffer:
+            shutil.copyfileobj(file.file, buffer)
+        return JSONResponse(content={"message": "File uploaded successfully"}, status_code=200)
+    except Exception as e:
+        return JSONResponse(content={"error": str(e)}, status_code=500)
 
-@app.post("/uploadfile/")
+@app.post("/uploadfile")
 async def create_upload_file(file: UploadFile):
-    return {"filename": file.filename}
+    try:
+        save_file(file)
+        return JSONResponse(content={"message": "File uploaded successfully"}, status_code=200)
+    except Exception as e:
+        return JSONResponse(content={"error": str(e)}, status_code=500)
 
-@app.post("/classify/")
+@app.post("/classify")
 async def classify(file: UploadFile):
     response = {"filename": file.filename}
     try:
+        # Save the uploaded file
+        save_file(file)
+
         # Load the trained model
         model_path = os.path.abspath('../notebooks/image_classifier_model.h5')
         model = load_model(model_path)
@@ -45,12 +61,12 @@ async def classify(file: UploadFile):
         # Display the prediction
         response = {"result": predicted_class}
     except ValueError as ve:
-        print(f"Error: {ve}. Please enter valid integers.")
+        response = f"Error: {ve}. Please enter valid integers."
 
     except ZeroDivisionError as zde:
-        print(f"Error: {zde}. Division by zero is not allowed.")
+        response = f"Error: {zde}. Division by zero is not allowed."
 
     except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+        response = f"An unexpected error occurred: {e}"
 
     return response

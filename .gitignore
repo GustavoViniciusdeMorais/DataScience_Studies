@@ -1,3 +1,6 @@
 .ipynb_checkpoints
 datasets
 __pycache__
+*.jpg
+*.png
+*.h5
