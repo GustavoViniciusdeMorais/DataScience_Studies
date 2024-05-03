@@ -1,0 +1,6 @@
+/usr/local/lib/python3.10/dist-packages/pendulum/tz/local_timezone.py:244 UserWarning: Unable not find any timezone configuration, defaulting to UTC.
+[2024-05-03 17:32:43 +0000] [83] [INFO] Starting gunicorn 22.0.0
+[2024-05-03 17:32:43 +0000] [83] [INFO] Listening at: http://[::]:8793 (83)
+[2024-05-03 17:32:43 +0000] [83] [INFO] Using worker: sync
+[2024-05-03 17:32:43 +0000] [84] [INFO] Booting worker with pid: 84
+[2024-05-03 17:32:43 +0000] [86] [INFO] Booting worker with pid: 86

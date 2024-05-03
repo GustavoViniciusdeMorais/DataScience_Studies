@@ -1,2 +1,5 @@
 .ipynb_checkpoints
 datasets
+airflow/logs
+airflow/airflow.db
+airflow/dags/__pycache__
