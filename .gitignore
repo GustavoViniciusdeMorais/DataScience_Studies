@@ -3,3 +3,6 @@ datasets
 airflow/logs
 airflow/airflow.db
 airflow/dags/__pycache__
+airflow/dags/message.txt
+airflow/airflow-scheduler.*
+airflow/airflow-webserver.*

@@ -1,5 +1,7 @@
 # Apache Airflow
 
+- [DAGs](./dags.md)
+
 1. **Update Package Lists**: Start by updating the package lists for upgrades and new package installations.
 
 ```bash
