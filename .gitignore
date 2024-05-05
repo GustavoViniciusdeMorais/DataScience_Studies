@@ -6,3 +6,4 @@ airflow/dags/__pycache__
 airflow/dags/message.txt
 airflow/airflow-scheduler.*
 airflow/airflow-webserver.*
+airflow/airflow-webserver*

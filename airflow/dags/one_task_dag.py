@@ -1,5 +1,5 @@
 from airflow import DAG
-from airflow.operators.bash_operator import BashOperator
+from airflow.operators.bash import BashOperator
 from datetime import datetime
 
 # Define the default arguments for the DAG
@@ -13,12 +13,12 @@ with DAG(
     'one_task_dag',
     default_args=default_args,
     description='First DAG',
-    schedule_interval=None
+    schedule=None
 ) as dag:
 
     task1 = BashOperator(
         task_id='write_message_to_file',
-        bash_command='echo "First DAG." >> /var/www/html/dags/message.txt',
+        bash_command='echo "First DAG." > ./message.txt',
         dag=dag
     )
 
