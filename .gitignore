@@ -7,3 +7,4 @@ airflow/dags/message.txt
 airflow/airflow-scheduler.*
 airflow/airflow-webserver.*
 airflow/airflow-webserver*
+*.csv
