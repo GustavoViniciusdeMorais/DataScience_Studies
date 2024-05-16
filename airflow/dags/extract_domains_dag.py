@@ -19,7 +19,7 @@ with DAG(
     task1 = BashOperator(
         task_id='task_extract_domains_to_csv',
         bash_command='wget -c https://r2.datahub.io/clt98mhbp000nl708qb1tppbw/master/raw/top-level-domain-names.csv \
-        -O ./domains.csv',
+        -O /var/www/html/domains.csv',
         dag=dag
     )
 
