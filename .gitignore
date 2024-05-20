@@ -8,3 +8,4 @@ airflow/airflow-scheduler.*
 airflow/airflow-webserver.*
 airflow/airflow-webserver*
 *.csv
+*.db
