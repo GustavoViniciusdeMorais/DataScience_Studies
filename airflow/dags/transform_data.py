@@ -18,6 +18,8 @@ with DAG(
         df = pd.read_csv('/var/www/html/domains.csv')
         generic_type_df = df[df['Type'] == 'generic']
         generic_type_df['Date'] = date.today().strftime('%Y-%m-%d')
+        generic_type_df['SponsoringOrganization'] = generic_type_df['Sponsoring Organisation']
+        generic_type_df.drop('Sponsoring Organisation', axis=1, inplace=True)
         generic_type_df.to_csv('/var/www/html/generic_domains.csv', index=False)
 
     transform_task = PythonOperator(

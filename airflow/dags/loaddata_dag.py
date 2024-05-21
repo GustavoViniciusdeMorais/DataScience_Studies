@@ -16,7 +16,7 @@ with DAG(
 ) as dag:
     load_task = BashOperator(
         task_id='loaddata',
-        bash_command='python /var/www/html/airflow/dags/loaddata.py /var/www/html/generic_domains.csv /var/www/html/database.db',
+        bash_command='python3 /var/www/html/airflow/dags/loaddata.py /var/www/html/generic_domains.csv /var/www/html/database.db',
         dag=dag
     )
 
