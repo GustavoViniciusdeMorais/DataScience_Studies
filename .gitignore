@@ -9,3 +9,4 @@ airflow/airflow-webserver.*
 airflow/airflow-webserver*
 *.csv
 *.db
+*__pycache__*
