@@ -1,18 +1,49 @@
-version: '3'
+version: '3.7'
 
 services:
-    jupyternotes:
-        build: .
-        container_name: gusdatasci
-        ports:
-            - "8888:8888"
+    elasticsearch:
+        image: docker.elastic.co/elasticsearch/elasticsearch:7.13.2
+        container_name: elasticsearch
+        environment:
+            - node.name=elasticsearch
+            - cluster.name=docker-cluster
+            - discovery.type=single-node
+            - bootstrap.memory_lock=true
+            - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+            - xpack.security.enabled=true
+            - ELASTIC_USERNAME=${ELASTIC_USERNAME}
+            - ELASTIC_PASSWORD=${ELASTIC_PASSWORD}
+        ulimits:
+            memlock:
+                soft: -1
+                hard: -1
         volumes:
-            - ./:/work
+            - esdata:/usr/share/elasticsearch/data
+        ports:
+            - 9200:9200
+        networks:
+            - elastic
+
+    kibana:
+        image: docker.elastic.co/kibana/kibana:7.13.2
+        container_name: kibana
+        environment:
+            - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+            - ELASTICSEARCH_USERNAME=${ELASTIC_USERNAME}
+            - ELASTICSEARCH_PASSWORD=${ELASTIC_PASSWORD}
+            - SERVER_NAME=kibana
+            - XPACK_SECURITY_ENABLED=true
+        ports:
+            - 5601:5601
+        networks:
+            - elastic
+        depends_on:
+            - elasticsearch
+
+volumes:
+    esdata:
+        driver: local
 
 networks:
-    gus-php-network:
+    elastic:
         driver: bridge
-        ipam:
-            driver: default
-            config:
-                - subnet: "12.0.0.0/16"
