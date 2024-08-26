@@ -2,6 +2,8 @@
 
 ### Gustavo Vinicius Morais
 
+- [Pandas](./pandas.md)
+
 ### The changes are in the branches
 ```
 [branch/kaggle-*]
