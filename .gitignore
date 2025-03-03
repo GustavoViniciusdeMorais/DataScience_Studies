@@ -1,2 +1,4 @@
 .ipynb_checkpoints
 datasets
+chroma_langchain_db
+*.pdf
