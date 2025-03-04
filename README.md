@@ -4,9 +4,9 @@
 
 - [Pandas](./pandas.md)
 
-### The changes are in the branches
+### The changes are in the branch
 ```
-[branch/kaggle-*]
+[branch/langchain]
 ```
 
 ```
@@ -27,3 +27,6 @@ ollama pull mistral
 # The server must be running
 # The langchain in the jupyter notebook already nows the port to request, no need to config the local endpoint
 ```
+### RAG (Retrieval Augmented Generation)
+[Code example](./scripts/rag_pdf_v2.ipynb)<br>
+<img width=900 height=500 src="./imgs/rag.png" />
