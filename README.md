@@ -9,6 +9,10 @@
 [branch/langchain]
 ```
 
+### Requirements
+- [LLM Ollama](https://ollama.com/)
+- [LangChain](https://python.langchain.com/v0.2/docs/introduction/)
+
 ```
 sudo docker-compose up -d --build
 sudo docker exec -it [container_name_1] sh
