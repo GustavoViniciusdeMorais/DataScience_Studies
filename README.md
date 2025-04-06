@@ -32,5 +32,9 @@ ollama pull mistral
 # The langchain in the jupyter notebook already nows the port to request, no need to config the local endpoint
 ```
 ### RAG (Retrieval Augmented Generation)
-[Code example](./scripts/rag_pdf_v2.ipynb)<br>
+- [Code example](./scripts/rag_pdf_v2.ipynb)
+- [Vectore Sore from PDFs](./scripts/VectorStore.ipynb)
+- [Build documents DB](https://python.langchain.com/docs/integrations/vectorstores/chroma/)
+- [RAG Chat](https://python.langchain.com/v0.2/docs/tutorials/qa_chat_history/)
+<br><br>
 <img width=900 height=500 src="./imgs/rag.png" />
