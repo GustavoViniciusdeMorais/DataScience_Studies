@@ -3,3 +3,5 @@ datasets
 chroma_langchain_db
 *.pdf
 laravel_ddd
+.venv
+uv.lock
