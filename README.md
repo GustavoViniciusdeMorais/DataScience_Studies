@@ -33,7 +33,7 @@ ollama pull mistral
 ```
 ### RAG (Retrieval Augmented Generation)
 - [Code example](./scripts/rag_pdf_v2.ipynb)
-- [Vectore Sore from PDFs](./scripts/VectorStore.ipynb)
+- [Vectore Store from PDFs](./scripts/VectorStore.ipynb)
 - [Build documents DB](https://python.langchain.com/docs/integrations/vectorstores/chroma/)
 - [RAG Chat](https://python.langchain.com/v0.2/docs/tutorials/qa_chat_history/)
 <br><br>
