@@ -11,7 +11,7 @@
 
 ### Requirements
 - [LLM Ollama](https://ollama.com/)
-- [Ollama ModelFile)(https://github.com/ollama/ollama/blob/main/docs/modelfile.md)
+- [Ollama ModelFile](https://github.com/ollama/ollama/blob/main/docs/modelfile.md)
 - [LangChain](https://python.langchain.com/v0.2/docs/introduction/)
 
 ```
