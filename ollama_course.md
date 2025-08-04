@@ -1,6 +1,6 @@
 # Local LLM Course
 - Requirements
-  - Ollama
+  - [Ollama](https://ollama.com/download/linux)
 
 ```bash
 service ollama start
