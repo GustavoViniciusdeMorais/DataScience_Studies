@@ -15,3 +15,8 @@ ollama ls
 ```bash
 ollama create jimmy -f ./Modelfile
 ```
+### curl
+```bash
+curl localhost:11434/api/generate \
+-d '{"model":"jimmy","prompt":"give me a simple php function to sum two numbers", "stream":false}'
+```
