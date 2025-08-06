@@ -11,3 +11,7 @@ ollama stop qwen2.5-coder:1.5b
 ollama rm qwen2.5-coder:1.5b
 ollama ls
 ```
+### create model
+```bash
+ollama create jimmy -f ./Modelfile
+```
