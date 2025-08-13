@@ -25,3 +25,10 @@ curl localhost:11434/api/generate \
   "format": "json"
 }'
 ```
+### python
+```python
+import ollama
+client = ollama.Client(host='172.17.0.1:11434')
+client.list
+ollama.chat(model="qwen2.5-coder:1.5b",messages=[{"role":"user","content":"test"}])
+```
