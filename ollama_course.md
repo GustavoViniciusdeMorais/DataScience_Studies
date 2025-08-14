@@ -11,6 +11,14 @@ ollama stop qwen2.5-coder:1.5b
 ollama rm qwen2.5-coder:1.5b
 ollama ls
 ```
+### UV Env
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+uv init sci
+cd sci
+uv add ollama
+uv run src/ollama_curl.py
+```
 ### create model
 ```bash
 ollama create jimmy -f ./Modelfile
