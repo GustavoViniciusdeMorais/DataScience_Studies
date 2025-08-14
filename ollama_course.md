@@ -1,6 +1,7 @@
 # Local LLM Course
 - Requirements
   - [Ollama](https://ollama.com/download/linux)
+  - [Python UV](https://docs.astral.sh/uv/#installation)
 
 ```bash
 service ollama start
