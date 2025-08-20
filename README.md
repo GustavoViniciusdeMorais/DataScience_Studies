@@ -3,6 +3,7 @@
 ### Gustavo Vinicius Morais
 
 - [Pandas](./pandas.md)
+- [Local Ollama](./ollama_course.md)
 
 ### The changes are in the branch
 ```
