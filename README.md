@@ -2,6 +2,7 @@
 - Requirements
   - [Ollama](https://ollama.com/download/linux)
   - [Python UV](https://docs.astral.sh/uv/#installation)
+  - [Modelfile example](./Modelfile)
 
 ```bash
 service ollama start
