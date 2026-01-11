@@ -17,8 +17,8 @@ ollama ls
 ```bash
 # https://docs.astral.sh/uv/#installation
 curl -LsSf https://astral.sh/uv/install.sh | sh
-uv init sci
-cd sci
+uv init llm_ollama
+cd llm_ollama
 uv add ollama
 uv run src/ollama_curl.py
 ```
