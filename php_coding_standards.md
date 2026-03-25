@@ -206,6 +206,10 @@ $users->filter(fn(User $user): bool => $user->is_active)
     ->each(function (User $user) {
         $user->update(['attribute' => 'test']);
     });
+
+collect($data$)->each(function ($item) {
+    // code..
+});
 ```
 
 ## Whitespace
