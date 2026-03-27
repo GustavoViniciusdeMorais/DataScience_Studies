@@ -270,3 +270,19 @@ User to safe get array keys or object attributes
 ```php
 data_get($user, 'email', null);
 ```
+
+**Laravel Validator**
+```php
+use Illuminate\Support\Facades\Validator;
+
+$validated = Validator::validate($payload, [
+    'name' => ['nullable', 'string'],
+    'email' => ['nullable', 'string'],
+    'data' => ['nullable', 'array'],
+    'data.files' => ['nullable', 'array'],
+]);
+
+$validated['data'] = [...$user->data, ...data_get($validated, 'data', [])];
+
+$user->update($validated);
+```
