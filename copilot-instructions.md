@@ -41,7 +41,7 @@ classes, everything.
 - A class can not have more then 200 lines of code
 - Every code suggestion must be easy for humans to understand and junior developers to maintain.
 - Always use php helper functions, for instance, strlen to get string length.
-
+- Always use the principles of SOLID, DRY (Don't repeat yourself), KISS (Keep It Simple Stupid)
 
 ### DTO Class
 ```php
